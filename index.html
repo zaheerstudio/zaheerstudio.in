@@ -8,7 +8,17 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts for Big Shoulders Stencil Display (overlay), Playfair Display (headings), and Raleway (body) -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with your Public Key
+            emailjs.init({
+                publicKey: 'I-oIVgXcNROnxYe7C' // Replace with your EmailJS Public Key
+            });
+        })();
+    </script>
 </head>
 <body>
     <div class="hero-section fade-in">
@@ -18,9 +28,9 @@
     <section class="contact-section fade-in">
         <!-- Intro Text Moved Above Contact Info -->
         <div class="contact-intro">
-            <p>At Zaheer Studio, we’re passionate about capturing your unique journey and feel privileged to be part of your special moments.</p>
-            <p>Please fill out the form below  so we can provide you with a tailored quote. We strive to get back to you within 48 hours.
-            If you don’t hear from us by then or have an urgent inquiry, don’t hesitate to reach out using the contact details.</p>
+            <p class="intro-text">At Zaheer Studio, we’re passionate about capturing your unique journey and feel privileged to be part of your special moments.</p>
+            <p class="intro-text">Please fill out the form below so we can provide you with a tailored quote. We strive to get back to you within 48 hours.</p>
+            <p class="intro-text">If you don’t hear from us by then or have an urgent inquiry, don’t hesitate to reach out using the contact details.</p>
         </div>
         <div class="contact-info">
             <h2>Zaheer Studio</h2>
@@ -90,7 +100,7 @@
     <a href="https://wa.me/918208128211" target="_blank" class="whatsapp-btn" aria-label="Chat with us on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <div class="contact-intro">
+    <div class="contact-intro footer">
         <p>Copyright © 2025 zaheerstudio.in. <br>
              All rights reserved.</p>
     </div>
