@@ -19,7 +19,7 @@ body {
     position: relative;
     width: 100%; /* Ensure full width */
     height: 55vh; /* Default height for larger screens */
-    background-image: url('/background-image.JPG'); /* Replace with your image */
+    background-image: url('https://github.com/zaheerstudio/zaheerstudio.in/blob/main/background-image.JPG'); /* Replace with your image */
     background-size:cover; /* Cover the entire area, maintaining aspect ratio */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
