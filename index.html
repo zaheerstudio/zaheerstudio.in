@@ -15,7 +15,7 @@
         (function() {
             // Initialize EmailJS with your Public Key
             emailjs.init({
-                publicKey: 'I-oIVgXcNROnxYe7C' // Replace with your EmailJS Public Key
+                publicKey: 'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
             });
         })();
     </script>
@@ -58,26 +58,32 @@
                 <div class="form-group">
                     <label for="name">Name <span class="required">*</span></label>
                     <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
                     <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone <span class="required">*</span></label>
                     <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phone-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="guest-count">Estimated Guest Count <span class="required">*</span></label>
                     <input type="text" id="guest-count" name="guest-count" required>
+                    <span class="error-message" id="guest-count-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="event-details">Tell us more about your Event <span class="required">*</span></label>
                     <textarea id="event-details" name="event-details" rows="4" required></textarea>
+                    <span class="error-message" id="event-details-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="location">Location of the Event <span class="required">*</span></label>
                     <input type="text" id="location" name="location" required>
+                    <span class="error-message" id="location-error"></span>
                 </div>
                 <div class="form-group">
                     <label>What service are you looking for? <span class="required">*</span></label>
@@ -86,11 +92,13 @@
                         <label class="radio-label"><input type="radio" name="service" value="Films"> Films</label>
                         <label class="radio-label"><input type="radio" name="service" value="Both"> Both Photography and Films</label>
                     </div>
+                    <span class="error-message" id="service-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="budget">What is your budget? (optional)</label>
                     <p class="budget-note">Our Wedding Package Starts from Rs. 1,00,000 per day and on an average cost Rs. 2,00,000 for 2 days.</p>
                     <textarea id="budget" name="budget" rows="3"></textarea>
+                    <span class="error-message" id="budget-error"></span>
                 </div>
                 <button type="submit">Submit</button>
             </form>
