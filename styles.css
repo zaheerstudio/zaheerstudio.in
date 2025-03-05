@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif; /* Default body font */
+    font-weight: 500; /* Ensure Lora uses 500 weight */
+}
+
+@font-face {
+    font-family: Majestic;
+    src: url(BlackMountain-vmlBZ.ttf);
+}
+body {
+    background-color: #f5f0e6; /* Beige background */
+}
+
+/* Hero Section with Background Image */
+.hero-section {
+    position: relative;
+    width: 100%; /* Ensure full width */
+    height: 55vh; /* Default height for larger screens */
+    background-image: url('background-image.jpg'); /* Replace with your image */
+    background-size:cover; /* Cover the entire area, maintaining aspect ratio */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+
+.overlay-text {
+    position: relative;
+    top: 50%; /* Position at the bottom with some padding */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 15rem; /* Large size for desktop */
+    font-family: 'Majestic'; /* Stencil font for overlay */
+    text-align: center;
+
+    letter-spacing: 6px; /* Increased spacing for the stencil style */
+    
+    padding:  20px;
+    border-radius: 5px;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7); /* Strong shadow for readability */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 20px;
+    max-width: 90vh;
+    margin: 0 auto;
+}
+
+/* Contact Intro Section */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    padding-top: 1.1rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
+    font-weight: 700;
+}
+
+.contact-info p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 5px 0;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Increased gap for larger icons */
+}
+
+.social-links a {
+    color: #333;
+    font-size: 2rem; /* Larger icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.social-links .fa-youtube:hover {
+    color: #ff0000; /* YouTube red */
+}
+
+.social-links .fa-instagram:hover {
+    color: #d4af37; /* Gold */
+}
+
+.social-links .fa-facebook:hover {
+    color: #3b5998; /* Facebook blue */
+}
+
+.social-links .fa-envelope:hover {
+    color: #d4af37; /* Gold for email icon */
+}
+
+/* Form Styling */
+.contact-form {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); /* Subtle gradient background */
+    padding: 40px; /* Default padding */
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer, deeper shadow */
+    border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Increased spacing between form groups */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem; /* Slightly larger labels */
+    color: #333;
+    margin-bottom: 8px; /* More space below labels */
+    font-family: 'Playfair Display', serif; /* Use Playfair Display for labels */
+    font-weight: 700;
+    position: relative;
+}
+
+.form-group label::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #d4af37; /* Gold underline */
+}
+
+.form-group .required {
+    color: #d4af37; /* Gold */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for inputs */
+    border: 2px solid #ddd; /* Thicker border */
+    border-radius: 8px; /* Softer corners */
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d4af37; /* Gold */
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2); /* Gold glow on focus */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Spacing between radio options */
+}
+
+.radio-label {
+    display: flex;
+    align-items: center; /* Align radio button and label on the same line */
+    gap: 10px; /* Space between radio button and label text */
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    width: 18px; /* Larger radio button for better visibility */
+    height: 18px;
+    accent-color: #d4af37; /* Gold */
+}
+
+.budget-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic; /* Add a touch of elegance */
+}
+
+button {
+    width: 100%;
+    padding: 14px; /* Taller button */
+    background: linear-gradient(135deg, #d4af37 0%, #b8972e 100%); /* Gold gradient */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Slightly larger text */
+    color: white;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Match label font */
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #b8972e 0%, #d4af37 100%); /* Reverse gold gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366; /* WhatsApp green */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1) rotate(10deg); /* Zoom and slight rotation on hover */
+    background-color: #20b858; /* Slightly darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 40vh; /* Slightly shorter for tablets */
+    }
+
+    .overlay-text {
+        top:70%;
+        font-size: 8rem; /* Slightly smaller font for tablets */
+        letter-spacing: 3px; /* Adjust spacing */
+        padding: 8px 16px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    .social-links a {
+        font-size: 1.8rem; /* Slightly smaller for tablets */
+    }
+
+    .contact-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-intro p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 24vh; /* Shorter height for mobile devices */
+    }
+
+    .overlay-text {
+        top: 60%;
+        font-size: 8rem; /* Smaller font for mobile */
+        letter-spacing: 2px; /* Adjust spacing for mobile */
+    }
+
+    .contact-section {
+        padding: 15px; /* Reduced padding */
+    }
+
+    .contact-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    .contact-intro {
+        margin-bottom: 20px; /* Reduced margin */
+    }
+
+    .contact-intro p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+    .contact-form {
+        padding: 20px; /* Reduced padding for mobile */
+        border-radius: 10px; /* Slightly smaller corners */
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Reduced spacing */
+    }
+
+    .form-group label {
+        font-size: 1rem; /* Smaller labels */
+        margin-bottom: 6px;
+    }
+
+    .form-group label::after {
+        width: 25px; /* Slightly shorter underline */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px; /* Slightly smaller padding */
+        font-size: 0.95rem; /* Smaller font size */
+        border-radius: 6px; /* Smaller corners */
+    }
+
+    .radio-label {
+        gap: 8px; /* Slightly smaller gap */
+        font-size: 0.95rem; /* Smaller font size */
+    }
+
+    .radio-label input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .budget-note {
+        font-size: 0.85rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .social-links {
+        gap: 20px; /* Reduced gap */
+    }
+
+    .social-links a {
+        font-size: 1.5rem; /* Smaller for mobile */
+    }
+
+    .whatsapp-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 30vh; /* Even shorter for small screens */
+    }
+
+    .overlay-text {
+        font-size: 5rem; /* Much smaller for small screens */
+        letter-spacing: 1px; /* Tighter spacing */
+        padding: 5px 10px;
+        bottom: 10px; /* Closer to the bottom */
+    }
+
+    .contact-section {
+        padding: 10px; /* Further reduced padding */
+    }
+
+    .contact-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .contact-intro {
+        margin-bottom: 15px; /* Further reduced margin */
+    }
+
+    .contact-intro p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 6px;
+    }
+
+    .contact-form {
+        padding: 15px; /* Further reduced padding */
+        border-radius: 8px; /* Even smaller corners */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Further reduced spacing */
+    }
+
+    .form-group label {
+        font-size: 0.9rem; /* Even smaller labels */
+        margin-bottom: 5px;
+    }
+
+    .form-group label::after {
+        width: 20px; /* Shorter underline */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+        border-radius: 5px; /* Smaller corners */
+    }
+
+    .radio-label {
+        gap: 6px; /* Smaller gap */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .radio-label input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .budget-note {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .social-links {
+        gap: 15px; /* Further reduced gap */
+    }
+
+    .social-links a {
+        font-size: 1.3rem; /* Smallest for small screens */
+    }
+
+    .whatsapp-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-section {
+        height: 25vh; /* Shortest for very small screens */
+    }
+
+    .overlay-text {
+        font-size: 5rem; /* Smallest font size */
+        letter-spacing: 0.5px;
+        padding: 4px 8px;
+        bottom: 8px;
+    }
+
+    .contact-section {
+        padding: 8px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .contact-intro {
+        margin-bottom: 12px;
+    }
+
+    .contact-intro p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+
+    .contact-form {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .form-group label::after {
+        width: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 7px;
+        font-size: 0.85rem;
+        border-radius: 4px;
+    }
+
+    .radio-label {
+        gap: 5px;
+        font-size: 0.85rem;
+    }
+
+    .radio-label input[type="radio"] {
+        width: 12px;
+        height: 12px;
+    }
+
+    .budget-note {
+        font-size: 0.75rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+    }
+
+    .whatsapp-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+        bottom: 8px;
+        right: 8px;
+    }
+}
